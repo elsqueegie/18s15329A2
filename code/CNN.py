@@ -373,7 +373,7 @@ saver = tf.train.Saver(tf.global_variables())
 saver.save(session, "../models/cnn/cnn_1/test_final_inception_cnn.ckpt")
 
 
-# In[58]:
+# In[112]:
 
 
 def score_images(dataset,v_batch_size = 500):
@@ -397,8 +397,68 @@ def score_images(dataset,v_batch_size = 500):
 
 def save_predictions(predictions):
     # Save the predictions in the appropriate file and folder
-    outpath = dt.datetime.now().strftime('../outputs/')
+    outpath = '../outputs/'
     outfile = outpath+'test.txt'
-    os.makedirs(outpath)
+    try:
+        os.makedirs(outpath)
+    except:
+        None
     predictions.to_csv(outfile, header=False, sep=" ")
+
+
+# In[103]:
+
+
+def load_testing_data(input_path, dataset_type, image_size):
+    # Load the data into a datset object for easy management
+    images = []
+    labels = []
+    img_names = []
+    cls = []
+    data_path = os.path.join(input_path, str(dataset_type+'_set'))
+    label_path = os.path.join(input_path, str(dataset_type+'.txt'))
+    with open(label_path, 'r') as label_file:
+        lines = label_file.readlines()
+        random.shuffle(lines) # Shuffle at load to ensure randomization
+        for line in lines:
+            filename = line.split('\n')[0]
+            label = np.zeros(62)
+            #label[int(index)] = 1.0
+            labels.append(label)
+            img_names.append(filename)
+            image_file_path = os.path.join(data_path, filename)
+            image = cv2.imread(image_file_path, cv2.IMREAD_GRAYSCALE)
+            image = cv2.resize(image, (image_size, image_size),0,0, cv2.INTER_LINEAR)
+            image = np.reshape(image, image_size*image_size)
+            images.append(image)
+            #cls.append(int(index))
+    images = np.array(images)
+    labels = np.array(labels)
+    img_names = np.array(img_names)
+    cls = np.array(cls)
+    return DataSet(images, labels, img_names, cls)
+
+
+# In[104]:
+
+
+testing = load_testing_data('../Input', 'test', 32)
+
+
+# In[105]:
+
+
+len(testing.images)
+
+
+# In[106]:
+
+
+test_df = score_images(testing)
+
+
+# In[113]:
+
+
+save_predictions(test_df)
 
