@@ -150,18 +150,29 @@ We have used two inception layers to learn the low level features of the image. 
 Using conv-layers the networks is able to learn both low level features and high level abstractions in the image. We use fully connected layers at the end of the network and outputs the N dimensional vector where N is the number of classes to be predicted. We have used \textbf{softmax} to find the class which is best suited to the input image. Fully connected layers connect to the out of the previous layer(which is activation map of the high level features) and finds the features which are most suitable for a particular class. FC layer uses the most correlated features for a particular class and learns weights so that we get correct probability for the different classes when it performs product of weights and output of previous layer.
 
 \section{Experiments and results}
-An experiment was run to determine the optimal settings for a number of hyperparameters. These hypereparameters are network architecture, regularization, iteration and batch size.
+An experiment was run to determine the optimal settings for a number of hyperparameters. These hypereparameters are network architecture, regularization, iteration, image size and batch size.
 \newline
 For the first hyperparameter, sophisticated architectures outperformed basic architectures. The introduction of multiple convolutional layers, as well as layer 'inception', raised out-of-sample performance considerably. The use of parallelized convolutions of different sizes meant that different streams could concentrate on extracting different features, and this capability was reflected in better performance.
 \newline
-The second hyperparameter, quickly became necessary as the network architecture exploded the count of trainable variables. In order to prevent these from overfitting, three regularization devices were used. Firstly, the model weights were penalized using L2 regularization. This suppressed extreme coefficient values in both the convolutional and fully-connected layers. L2 was eventually chosen as L1 produced sparsity, which reduced weights to zero. Secondly, batch normalization was employed in all convolutional and fully-connected layers. Batch-normalization was applied before activation functions, and was useful in preventing exploding or vanashing gradients. Lastly, a slight dropout probability was applied to the first fully-connected layer. All of these techniques improved out-of-sample performance when training accuracy approached the ceiling.
+The second hyperparameter, regularization, quickly became necessary as the network architecture exploded the count of trainable variables. In order to prevent these from overfitting, three regularization devices were used. Firstly, the model weights were penalized using L2 regularization. This suppressed extreme coefficient values in both the convolutional and fully-connected layers. L2 was eventually chosen as L1 produced sparsity, which reduced weights to zero. Secondly, batch normalization was employed in all convolutional and fully-connected layers. Batch-normalization was applied before activation functions, and was useful in preventing exploding or vanashing gradients. Lastly, a slight dropout probability was applied to the first fully-connected layer. All of these techniques improved out-of-sample performance when training accuracy approached the ceiling.
 \newline
-The third and fourth hyperparameters were set by trial and error. Iteration count was kept at 10,000 and batch size was 128. Lower values did not guarantee convergence and higher values resulted in overly-long training processes. Additionally, since the count of classes was so high, it was important to ensure that there was sufficient chance of all classes appearing in any given training batch.
+The third, fourth and fifth hyperparameters were set by trial and error. Iteration count was set at 10,000, image size was 32 by 32 pixels, and batch size was 128. Images of 32-by-32 were initially selected as those values are commonly found in other machine learning datasets such as SVHN. Testing image size at 64-by-64 pixels resulted in a four-fold increase in training times, which was unacceptable. Additional training iterations did not improve out-of-sample performance, and the training process was already long at 100 minutes. Batch size was trialled at 64, 128 and 256. The first size did not guarantee all classes would appear often enough in a batch, and the last value resulted in overly long training times.
 \newline
 Once the hyperparameters were established, the final version of the network was trained. The results achieved are explored below.
 
 \subsection{Primary Metrics}
-Out of sample accuracy was 86.65\%. This was a strong result but considerably lower than in-sample performance, which was 95\%. Precision was 87.55\%, Recall was 86.65\% and F1 score was 96.65\%. All results were calculated on the test set and multiclass averaging was performed according to model weights. In multi-class problems it is always harder to interpret these metrics, since there is no clear null case. This is especially true given that all classes are of the same frequency, since weighting in this instance equates to a flat average. In reality results may differ, as some letters are more common than others.
+Out of sample accuracy was 86.94\%. Precision was 88.12\%, Recall was 86.94\% and F1 score was 86.73\%. All results were calculated on the test set and multiclass averaging was performed according to class weights, which were all equal. In multi-class problems it is always harder to interpret these metrics, since there is no clear null case. This is especially true given that all classes are of the same frequency, since weighting in this instance equates to a flat average. In reality results may differ, as some letters are more common than others.
+\newline
+This was a strong result but considerably lower than in-sample performance, which was 95.04\%. While regularization was employed to prevent overfitting, there was still a considerable gap between in-sample performance and out-of-sample performance.
+\begin{center}
+\begin{tabular}{ c c c }
+ Metric & Test Score & Train Score  \\ 
+ Precision & 88.12\% & 95.04\% \\
+ Recall & 86.94\%  & 94.33\% \\
+ F1 score & 86.73\% & 94.17\% \\  
+ Accuracy & 86.94\% & 94.33\%     
+\end{tabular}
+\end{center}
 
 \subsection{Extensive analysis}
 
@@ -192,11 +203,11 @@ In this dataset we have 62 classes and the number of images in training set is 3
 As mentioned earlier there are similarities in the shape of few characters like 0, O, o, 1, l, L, i, I etc. These ambiguities also confuses the model and adversely affects the classification ability of the network. 
 
 \section{Conclusions}
-This study has demonstrated a functioning ConvNet with some inception modules. It has performed well on an example dataset and meet expectations based on ConvNet's performance on held out data. Batch normalisation also helped in significant increase of network performance.  
+This study has demonstrated a functioning ConvNet with some inception modules. It has performed well on an example dataset and met expectations based on ConvNet's performance on held out data. Batch normalisation also helped in significantly increasing network performance.  
 \newline
-The performance of the ConvNet gives solid evidence that multiple networks are able to learn the sparsity in the data. The biggest advantage of using inception layer is significant decrease in the collaborative learning of different filters. As further study we would like to increase the depth of the networks and use filters to learn high level features to improve image classification of network.
+The performance of the ConvNet gives concrete evidence that multiple networks are able to divide the data into subsegments and specialise. The biggest advantage of using inception layer is significant decrease in the collaborative learning of different filters. As further study we would like to increase the depth of the networks and use filters to learn high level features to improve image classification of the network.
 \newline
-In most of real world cases we perform image classification with the context of the image. In case of alphabets, the context is created by the letters around it. For further improvement in classification performance we would like to incorporate methods to improve feature map with the help of context and use it resolve ambiguities.
+In most of real world cases we perform image classification with the context of the image. In the case of alphabets, the context is created by the letters around it. For example, zeros are often only distinguishable from 'O' by the presence of other numbers. For further improvement in classification performance we would like to incorporate methods to improve feature map with the help of context and use it resolve ambiguities.
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
