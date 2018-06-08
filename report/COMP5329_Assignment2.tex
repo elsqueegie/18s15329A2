@@ -76,7 +76,7 @@
 %\addcontentsline{toc}{section}{Introduction} % Adds this section to the table of contents
 Image classification is an important application of ConvNets. There are various architectures to design a ConvNet. The purpose of this case study is to experiment and establish an understanding of various techniques. Convolution layers and pooling layers are basic building blocks of a ConvNet. And its is crucial to understand the reason behind choosing the shape and sequence of these layers.
 \newline
-We have used NiN architecture where we have built parallel ConvNets and used a concatenation layer to collaborate the learning of different layers. These small NiNs are further stacked vertically further with layers of NiNs. With this study we wish to demonstrate that parallel networks learn different featurs of the images and collaborating these networks outperform the traditional approach of vertically stacking convolution and pooling layers.
+We have used NiN architecture where we have built parallel ConvNets and used a concatenation layer to collaborate the learning of different layers. These small NiNs are further stacked vertically with layers of NiNs. With this study we wish to demonstrate that parallel networks learn different featurs of the images and collaborating these networks outperform the traditional approach of vertically stacking convolution and pooling layers.
 \newline
 ConvNets can face issues with training. Training on the whole data simultaneously creates a large computational overhead for little performance gain. Training on a single observation can produce unpredictable results that do not generalise. Additionally, neural networks are prone to exploding coefficients and can suffer from the zero-gradient trap with the chosen ReLU activation. In order to address these challenges, the following features will be deployed within the neural network:
 \begin{itemize}
@@ -186,12 +186,17 @@ The Response Operator Characteristics curve can be generalised to multiclass pro
 
 \section{Discussion}
 In terms of deign of the network we can see that the use of collaborative multi-scale convolution produces more accurate results as compared to conventional ConvNets. A better performance of Inception Style model can be attributed to the collaboration of multiple parallel networks. It is important to note that the number of parameters is exponentially related to the number of features in training set. Inception style model has fewer parameters and it trains much faster using the collaborative approach.
-
+\newline
+In this dataset we have 62 classes and the number of images in training set is 38K. Considering the number of classes a higher number of images to train would help learn the features better. Also we can see a wide variety of fonts is used in the data. This increases the number of features for the model to learn. Apart from learning the shapes of alphabets the ConvNet has to learn the fonts as well. Thus increasing the training data would help in learning the rich input features.
+\newline
+As mentioned earlier there are similarities in the shape of few characters like 0, O, o, 1, l, L, i, I etc. These ambiguities also confuses the model and adversely affects the classification ability of the network. 
 
 \section{Conclusions}
 This study has demonstrated a functioning ConvNet with some inception modules. It has performed well on an example dataset and meet expectations based on ConvNet's performance on held out data. Batch normalisation also helped in significant increase of network performance.  
 \newline
 The performance of the ConvNet gives solid evidence that multiple networks are able to learn the sparsity in the data. The biggest advantage of using inception layer is significant decrease in the collaborative learning of different filters. As further study we would like to increase the depth of the networks and use filters to learn high level features to improve image classification of network.
+\newline
+In most of real world cases we perform image classification with the context of the image. In case of alphabets, the context is created by the letters around it. For further improvement in classification performance we would like to incorporate methods to improve feature map with the help of context and use it resolve ambiguities.
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST

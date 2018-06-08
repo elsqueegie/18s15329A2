@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.9)  8 JUN 2018 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.9)  8 JUN 2018 14:43
 entering extended mode
 **./COMP5329_Assignment2.tex
 (COMP5329_Assignment2.tex
@@ -1384,37 +1384,37 @@ Overfull \hbox (2.82245pt too wide) in paragraph at lines 181--182
  []
 
 [4 <./confusion_matrix.png> <./roc_curves.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 202--205
+Underfull \hbox (badness 10000) in paragraph at lines 207--210
 [][]$\OT1/ptm/m/n/10 (+20) https : / / www . doc . ic . ac . uk / []nd / surpri
 se[]96 / journal / vol1 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--221
+Underfull \hbox (badness 10000) in paragraph at lines 222--226
 [][]$\OT1/ptm/m/n/10 (+20) https : / / en . wikipedia . org / wiki / Cross[]ent
 ropy$[][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--227
+Underfull \hbox (badness 10000) in paragraph at lines 228--232
 [][]$\OT1/ptm/m/n/10 (+20) https : / / en . wikipedia . org / wiki / Stochastic
 []gradient[]
  []
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 229--231
+Underfull \hbox (badness 1199) in paragraph at lines 234--236
 []\OT1/ptm/m/n/10 (+20) Precision Re-call for mul-ti-class clas-si-fi-ca-tion [
 ][]$goo . gl /
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 237--239
+Underfull \hbox (badness 1189) in paragraph at lines 242--244
 []\OT1/ptm/m/n/10 (+20) Tensorflow 97% MNIST re-sult tu-to-rial [][]$https : / 
 / www .
  []
 
 
-Overfull \hbox (4.81126pt too wide) in paragraph at lines 272--274
+Overfull \hbox (4.81126pt too wide) in paragraph at lines 277--279
 \OT1/ptm/m/n/10 (-20) Copy fol-low-ing files from [][]$https : / / canvas . syd
 ney . edu . au / courses /
  []
@@ -1422,21 +1422,21 @@ ney . edu . au / courses /
 
 AED: lastpage setting LastPage
 [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 289.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 289.
  (COMP5329_Assignment2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 289.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 289.
 Package rerunfilecheck Info: File `COMP5329_Assignment2.out' has not changed.
 (rerunfilecheck)             Checksum: FE56CA438A6FFE06E0E689B8B81D5C38;1123.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 289.
  ) 
 Here is how much of TeX's memory you used:
- 21546 strings out of 493305
- 380008 string characters out of 3144899
+ 21549 strings out of 493305
+ 380035 string characters out of 3144899
  600893 words of memory out of 3000000
  24477 multiletter control sequences out of 15000+200000
- 47596 words of font info for 186 fonts, out of 3000000 for 9000
+ 47715 words of font info for 188 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,54p,1044b,402s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<D:/MiKTeX 2.9/fonts/type1/public/
@@ -1444,7 +1444,7 @@ amsfonts/cm/cmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 <D:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/MiKTeX 2.9/fonts/type1/u
 rw/times/utmb8a.pfb><D:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><D:/MiKTeX 
 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on COMP5329_Assignment2.pdf (5 pages, 535622 bytes).
+Output written on COMP5329_Assignment2.pdf (5 pages, 536543 bytes).
 PDF statistics:
  228 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)
