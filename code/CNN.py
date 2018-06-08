@@ -406,7 +406,7 @@ def save_predictions(predictions):
     predictions.to_csv(outfile, header=False, sep=" ")
 
 
-# In[103]:
+# In[114]:
 
 
 def load_testing_data(input_path, dataset_type, image_size):
@@ -419,7 +419,6 @@ def load_testing_data(input_path, dataset_type, image_size):
     label_path = os.path.join(input_path, str(dataset_type+'.txt'))
     with open(label_path, 'r') as label_file:
         lines = label_file.readlines()
-        random.shuffle(lines) # Shuffle at load to ensure randomization
         for line in lines:
             filename = line.split('\n')[0]
             label = np.zeros(62)
@@ -443,22 +442,6 @@ def load_testing_data(input_path, dataset_type, image_size):
 
 
 testing = load_testing_data('../Input', 'test', 32)
-
-
-# In[105]:
-
-
-len(testing.images)
-
-
-# In[106]:
-
-
 test_df = score_images(testing)
-
-
-# In[113]:
-
-
-save_predictions(test_df)
+save_predictions(test_df.sort_index())
 
