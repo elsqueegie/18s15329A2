@@ -321,7 +321,6 @@ def print_validation_accuracy():
     # Given test data, get the accuracy
     num_validation = len(validation.images)
     cls_pred = np.zeros(shape=num_validation, dtype=np.int)
-    i = 0
     feed_dict = {x: validation.images, y_true: validation.labels, training:False}
     cls_pred = session.run(y_hat_class, feed_dict=feed_dict)
     cls_true = validation.cls
@@ -349,7 +348,7 @@ train_scores = optimize(num_iterations=5001)
 # In[10]:
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
+
 plt.plot(train_scores)
 
 
@@ -420,7 +419,6 @@ def load_testing_data(input_path, dataset_type, image_size):
         for line in lines:
             filename = line.split('\n')[0]
             label = np.zeros(62)
-            #label[int(index)] = 1.0
             labels.append(label)
             img_names.append(filename)
             image_file_path = os.path.join(data_path, filename)
@@ -428,7 +426,7 @@ def load_testing_data(input_path, dataset_type, image_size):
             image = cv2.resize(image, (image_size, image_size),0,0, cv2.INTER_LINEAR)
             image = np.reshape(image, image_size*image_size)
             images.append(image)
-            #cls.append(int(index))
+            
     images = np.array(images)
     labels = np.array(labels)
     img_names = np.array(img_names)
