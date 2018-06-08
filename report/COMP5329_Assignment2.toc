@@ -2,7 +2,7 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}
 \contentsline {subsection}{\numberline {1.1}Data}{1}{subsection.1.1}
 \contentsline {section}{\numberline {2}Techniques}{1}{section.2}
-\contentsline {subsection}{\numberline {2.1}Convolution Layer}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.1}Convolution Layer}{1}{subsection.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Building blocks of ConvNet}{2}{subsubsection.2.1.1}
 \contentsline {subsection}{\numberline {2.2}Network Architecture}{2}{subsection.2.2}
 \contentsline {section}{\numberline {3}Experiments and results}{3}{section.3}
@@ -10,7 +10,7 @@
 \contentsline {subsection}{\numberline {3.2}Extensive analysis}{4}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Confusion Matrix}{4}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}ROC and ROC-AUC}{4}{subsubsection.3.2.2}
-\contentsline {section}{\numberline {4}Discussion}{5}{section.4}
+\contentsline {section}{\numberline {4}Discussion}{4}{section.4}
 \contentsline {section}{\numberline {5}Conclusions}{5}{section.5}
 \contentsline {section}{References}{5}{section.5}
 \contentsline {section}{\numberline {6}Appendix}{5}{section.6}
