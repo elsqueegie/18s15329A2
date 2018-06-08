@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.9)  8 JUN 2018 18:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.9)  8 JUN 2018 18:26
 entering extended mode
-**./COMP5329_Assignment2.tex
-(COMP5329_Assignment2.tex
+**./Report_COMP5329_Assignment2.tex
+(Report_COMP5329_Assignment2.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
 (SelfArx.cls
@@ -1093,8 +1093,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 34.
 Package hyperref Info: Option `breaklinks' set `true' on input line 34.
 Package hyperref Info: Option `bookmarksopen' set `false' on input line 34.
 
-(COMP5329_Assignment2.aux)
-\openout1 = `COMP5329_Assignment2.aux'.
+(Report_COMP5329_Assignment2.aux)
+\openout1 = `Report_COMP5329_Assignment2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
@@ -1155,9 +1155,9 @@ LaTeX Info: Redefining \ref on input line 60.
 LaTeX Info: Redefining \pageref on input line 60.
 LaTeX Info: Redefining \nameref on input line 60.
 
-(COMP5329_Assignment2.out) (COMP5329_Assignment2.out)
+(Report_COMP5329_Assignment2.out) (Report_COMP5329_Assignment2.out)
 \@outlinefile=\write4
-\openout4 = `COMP5329_Assignment2.out'.
+\openout4 = `Report_COMP5329_Assignment2.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -1267,7 +1267,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
- (COMP5329_Assignment2.toc
+ (Report_COMP5329_Assignment2.toc
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 12.
 
 ("D:\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
@@ -1277,7 +1277,7 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
 )
 \tf@toc=\write5
-\openout5 = `COMP5329_Assignment2.toc'.
+\openout5 = `Report_COMP5329_Assignment2.toc'.
 
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
@@ -1415,34 +1415,39 @@ Underfull \hbox (badness 1189) in paragraph at lines 253--255
 
 ! Undefined control sequence.
 l.291 Run command in \textybf
-                             {Code} folder: 'python CNN.py'
+                             {Code/Algorithm} folder: 'python CNN.py'
 ? 
 
 AED: lastpage setting LastPage
 [5 <./roc_curves.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 297.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 297.
- (COMP5329_Assignment2.aux)
+ (Report_COMP5329_Assignment2.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 297.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 297.
-Package rerunfilecheck Info: File `COMP5329_Assignment2.out' has not changed.
+Package rerunfilecheck Info: File `Report_COMP5329_Assignment2.out' has not cha
+nged.
 (rerunfilecheck)             Checksum: FE56CA438A6FFE06E0E689B8B81D5C38;1123.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 297.
  ) 
 Here is how much of TeX's memory you used:
  21553 strings out of 493305
- 380073 string characters out of 3144899
- 599893 words of memory out of 3000000
+ 380185 string characters out of 3144899
+ 599900 words of memory out of 3000000
  24478 multiletter control sequences out of 15000+200000
  47834 words of font info for 190 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,1044b,402s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,11n,54p,1051b,402s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<D:/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 <D:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/MiKTeX 2.9/fonts/type1/u
 rw/times/utmb8a.pfb><D:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><D:/MiKTeX 
 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on COMP5329_Assignment2.pdf (5 pages, 537147 bytes).
+Output written on Report_COMP5329_Assignment2.pdf (5 pages, 537157 bytes).
 PDF statistics:
  227 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)
