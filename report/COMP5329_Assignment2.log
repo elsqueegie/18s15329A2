@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.9)  8 JUN 2018 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.5.9)  8 JUN 2018 15:06
 entering extended mode
 **./COMP5329_Assignment2.tex
 (COMP5329_Assignment2.tex
@@ -1414,12 +1414,6 @@ Underfull \hbox (badness 1189) in paragraph at lines 242--244
  []
 
 
-Overfull \hbox (4.81126pt too wide) in paragraph at lines 277--279
-\OT1/ptm/m/n/10 (-20) Copy fol-low-ing files from [][]$https : / / canvas . syd
-ney . edu . au / courses /
- []
-
-
 AED: lastpage setting LastPage
 [5]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 289.
@@ -1444,9 +1438,9 @@ amsfonts/cm/cmsy10.pfb><D:/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
 <D:/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/MiKTeX 2.9/fonts/type1/u
 rw/times/utmb8a.pfb><D:/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><D:/MiKTeX 
 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on COMP5329_Assignment2.pdf (5 pages, 536536 bytes).
+Output written on COMP5329_Assignment2.pdf (5 pages, 536163 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
+ 227 PDF objects out of 1000 (max. 8388607)
  39 named destinations out of 1000 (max. 500000)
  35018 words of extra memory for PDF output out of 35830 (max. 10000000)
 
